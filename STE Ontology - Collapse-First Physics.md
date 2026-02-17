@@ -38,8 +38,7 @@
 
 ### Part V — Application
 15. [Reframing Map](#15-reframing-map)
-16. [Simulation Specification](#16-simulation-specification)
-17. [Open Questions & Future Work](#17-open-questions--future-work)
+16. [Open Questions & Future Work](#16-open-questions--future-work)
 
 ### Appendices
 - [Appendix A: Glossary](#appendix-a-glossary)
@@ -55,18 +54,18 @@ If this is your first read, use this order:
 2. Read [Sections 2–4](#2-axioms--primitives) for axioms and the core mechanism.
 3. Read [Sections 8–11](#8-cavitation-events) for particle and black-hole structure.
 4. Use [Section 15](#15-reframing-map) as a translation layer from standard physics language.
-5. Use [Section 17](#17-open-questions--future-work) to see what is still unresolved.
+5. Use [Section 16](#16-open-questions--future-work) to see what is still unresolved.
 
 How to interpret confidence in this document:
 
 - **Established in-model**: Derived directly from axioms and reused consistently across sections.
 - **Working hypothesis**: Proposed mechanism that is coherent but still awaiting derivation.
-- **Open question**: Explicitly marked as unresolved and listed in Section 17.
+- **Open question**: Explicitly marked as unresolved and listed in Section 16.
 
 Scope note:
 
 - This document is a mechanistic ontology and research program, not a completed theory.
-- The simulation path in [Section 16](#16-simulation-specification) and validation targets in [Section 16.7](#167-validation-targets) define falsifiability requirements.
+- This document defines mechanisms, predictions, and unresolved questions. Implementation-level simulation methods are intentionally omitted from this public document.
 
 ---
 
@@ -88,7 +87,7 @@ This framework:
 - Replaces "fields" with tension.
 - Replaces singularities with voids.
 
-The framework is not speculative philosophy. It is designed to be **simulation-ready** — every concept maps to a computable quantity, every mechanism maps to an update rule, every prediction is testable against known physics. The simulation specification (Section 16) is integral to the ontology, not an afterthought.
+The framework is not speculative philosophy. It is designed to be **simulation-ready** — every concept maps to a computable quantity, every mechanism maps to an update rule, every prediction is testable against known physics. Implementation-level simulation details are maintained separately from this public document.
 
 Three sources inform this document:
 - **The STE Ontology** — the core axioms, particle structures, cosmology, and simulation framework.
@@ -1499,193 +1498,21 @@ This section provides a systematic translation between orthodox physics concepts
 
 ---
 
-## 16. Simulation Specification
+## 16. Open Questions & Future Work
 
-### 16.1 Computational Approach: Smoothed Particle Hydrodynamics (SPH)
-
-> **This simulation uses a meshless, Lagrangian approach based on Smoothed Particle Hydrodynamics (SPH).**
-
-Conventional fixed-grid (Eulerian) methods are a poor fit for STE dynamics:
-- Fixed grids must represent voids as cells with zero density — causing divide-by-zero errors, artificial boundary artifacts, and wasted computation on empty space.
-- Fixed grids cannot naturally handle the enormous dynamic range of STE density.
-- Fixed grids impose an artificial structure on a substrate that has no inherent grid.
-
-**SPH solves all three problems:**
-
-| SPH Property | Why It Fits STE |
-|---|---|
-| **Lagrangian** | SPH "particles" are chunks of STE that move with the flow. No fixed grid — the computational elements follow the substrate. |
-| **Natural void handling** | A void is simply a region with no SPH particles. No special boundary treatment, no divide-by-zero — cavitation emerges naturally. |
-| **Built-in N-body self-attraction** | SPH has well-established methods for gravitational self-attraction (tree codes, fast multipole). Maps directly to STE collapse. |
-| **Adaptive resolution** | Dense regions (shells, resistance patterns) automatically have more particles and higher resolution. Empty regions cost nothing. |
-| **Conservation** | SPH inherently conserves mass (STE), momentum, and energy. |
-| **Coordinate-independent** | Meshless = no grid to align to any axis. Each particle knows only neighbor distances. Naturally matches STE's coordinate-independent dynamics. |
-
-**The key challenge:** Standard SPH kernels model **pressure-based fluids** where particles repel at close range. STE is the opposite — it is **anti-diffusive**, self-attracting, tension-based. A **custom SPH kernel** must be developed that:
-
-1. Replaces the standard pressure term with a **tension/attraction term** — particles pull neighbors inward.
-2. Implements **resistance** as energy generated when converging collapse streams collide.
-3. Handles the **cavitation threshold** — when local density drops below critical, particles are expelled (void formation).
-4. Models **shell compression** — particles accumulating at void boundaries under extreme density.
-5. Produces tension-wave propagation at $c$ as the natural wave speed.
-
-### 16.2 Domain Definition
-
-The simulation operates on **SPH particles** within a **fixed, flat spatial framework** with a **fixed time step**:
-
-- **Spatial framework**: Fixed, flat, 3D space (Axiom 2.1). Particles move through it; space never deforms. Coordinate system choice is an implementation convenience.
-- **Temporal resolution**: $\Delta t$ (universal, fixed, same for all particles). Time advances at a constant rate (Axiom 2.2).
-- **Total particles**: $N_p$ SPH particles, each representing a "chunk" of STE.
-- **Smoothing length**: $h$ — adaptive SPH kernel radius. Smaller in dense regions, larger in sparse regions.
-- **Total simulated time**: $T = N_t \times \Delta t$
-
-### 16.3 Per-Particle State
-
-Each SPH particle $p$ at time step $n$ stores:
-
-| Field | Symbol | Type | Description |
-|---|---|---|---|
-| Position | $\mathbf{x}_p^n$ | 3-Vector | Location in fixed coordinate frame |
-| Velocity | $\mathbf{v}_p^n$ | 3-Vector | Direction and magnitude of STE flow |
-| Mass (STE amount) | $m_p$ | Scalar $> 0$ | Amount of STE (conserved) |
-| Local density | $\rho_p^n$ | Scalar $> 0$ | SPH-interpolated STE density |
-| Smoothing length | $h_p^n$ | Scalar $> 0$ | Adaptive kernel radius |
-| Vibration energy | $A_p^n$ | Scalar $\geq 0$ | Stored resonant vibration energy (maps to temperature/radiation) |
-| Vorticity | $\boldsymbol{\omega}_p^n$ | 3-Vector | Local rotational structure ($\boldsymbol{\omega} = \nabla \times \mathbf{v}$) |
-
-**Voids require no state.** A void is a region with no particles. The absence of particles *is* the void.
-
-**Density estimation:**
-
-$$\rho_p^n = \sum_{q \in \text{neighbors}} m_q \, W(|\mathbf{x}_p^n - \mathbf{x}_q^n|, h_p^n)$$
-
-### 16.4 Update Rules Per Tick
-
-Each time step $n \rightarrow n+1$:
-
-**Stage 1: Compute Local Attraction**
-
-$$\mathbf{F}_{\text{attract}, p}^n = \alpha \sum_{q \in \text{neighbors}} m_q \, \nabla W(|\mathbf{x}_p^n - \mathbf{x}_q^n|, h_p^n)$$
-
-Custom STE tension kernel pulls neighbors inward (inverted from standard SPH pressure). Voids are natural barriers — where there are no particles, there is no attraction.
-
-> *Emergent gravity*: Long-range gravitational effects emerge naturally from chained local SPH interactions. For large-scale simulations, standard tree-code gravity ($O(N \log N)$) supplements the local kernel as a macro approximation.
-
-**Stage 2: STE Flow (Particle Motion)**
-
-$$\mathbf{v}_p^{n+1} = \mathbf{v}_p^n + \frac{\mathbf{F}_{\text{attract}, p}^n + \mathbf{F}_{\text{resist}, p}^n}{m_p} \, \Delta t$$
-
-$$\mathbf{x}_p^{n+1} = \mathbf{x}_p^n + \mathbf{v}_p^{n+1} \, \Delta t$$
-
-Conservation is automatic (particle mass constant). Advection is implicit (Lagrangian).
-
-**Stage 3: Resistance and Vibration Emission**
-
-Detect convergence via SPH velocity divergence:
-
-$$(\nabla \cdot \mathbf{v})_p = \frac{1}{\rho_p} \sum_{q \in \text{neighbors}} m_q \, (\mathbf{v}_q - \mathbf{v}_p) \cdot \nabla W(|\mathbf{x}_p - \mathbf{x}_q|, h_p)$$
-
-Resistance energy from convergence (negative divergence):
-
-$$R_p^n = \eta \, \rho_p^n \, |\min(0, (\nabla \cdot \mathbf{v})_p)|^2$$
-
-Vibrations propagate to neighbors at $c$.
-
-**Stage 4: Cavitation Check**
-
-If $\rho_p^{n+1} < \rho_{\text{cav}}$: particles are expelled outward. Shell compression emerges as particles accumulate at void boundaries.
-
-**Stage 5: Void Merger (Soap Bubble Rule)**
-
-Shell particles with void-adjacent faces on two or more opposing sides: if shared wall thickness drops below stability threshold, wall dissolves, voids merge.
-
-**Stage 6: Void Closure Check**
-
-If inward pressure exceeds closure threshold: shell particles compress inward, void fills, stored energy released as tension-pulse burst.
-
-**Stage 7: Vortex Shedding**
-
-High-vorticity shell particles ($|\boldsymbol{\omega}_p| > \omega_{\text{shed}}$): subset of mass is shed as new particles with inherited chirality. Forms micro-vortex clouds (electrons/positrons).
-
-### 16.5 Time Reversibility
-
-All update rules are time-reversible. Flip $\Delta t$ sign — all equations remain valid. Given any state at time $t$, the simulation produces the unique state at $t - \Delta t$.
-
-### 16.6 Fundamental Constants
-
-| Constant | Symbol | Physical Meaning | Calibration Target |
-|---|---|---|---|
-| STE attraction reach | $\ell_P$ | Maximum point-to-point attraction distance | Planck length — fixed |
-| STE attraction strength | $\alpha$ | Local attraction strength | Chain-propagated macro effect matches $G$ |
-| STE mobility | $\mu$ | Flow response to local density gradient | Orbital dynamics |
-| Substrate tension | $\tau$ | Tension-wave speed determinant | $c = \sqrt{\tau / \rho_0}$ |
-| Resistance coefficient | $\eta$ | Flow compression to vibration conversion | EM radiation spectra |
-| Cavitation threshold | $\rho_{\text{cav}}$ | Minimum density before void formation | Schwarzschild radius (macro); up quark mass (micro) |
-| Shell stability threshold | $\sigma_{\text{shell}}$ | Minimum shell thickness before merger | Binary BH merger dynamics |
-| Closure pressure threshold | $P_{\text{close}}$ | External pressure to close a void | Beta decay energies |
-| Vortex shedding threshold | $\omega_{\text{shed}}$ | Minimum vorticity for cloud emission | Electron mass, charge |
-| Vortex shedding coefficient | $\kappa$ | Energy per unit vorticity shed | Electron emission spectra |
-
-### 16.7 Validation Targets
-
-**Tier 1 — Foundational**
-- [ ] Keplerian orbital mechanics
-- [ ] Newtonian gravitational dynamics ($F = Gm_1m_2/r^2$ as macro limit)
-- [ ] Speed of light as tension-wave propagation speed
-- [ ] Conservation of energy and STE
-- [ ] Time-reversibility
-
-**Tier 2 — Particle Physics**
-- [ ] Proton mass from dual micro-void + concentration energetics
-- [ ] Neutron mass from single micro-void + concentration energetics
-- [ ] Proton-neutron mass difference
-- [ ] Electron mass from shed micro-vortex cloud energetics
-- [ ] Beta decay energies from void opening/closing
-- [ ] Quark confinement (concentration cannot sustain without void)
-
-**Tier 3 — Astrophysics**
-- [ ] Schwarzschild radius from cavitation shell geometry
-- [ ] Black hole merger dynamics from soap-bubble void merger
-- [ ] Accretion disk structure from macro-void concentration dynamics
-- [ ] Hawking radiation temperature from shell boundary vibrations
-- [ ] Gravitational wave signatures from STE density oscillations
-
-**Tier 4 — Cosmology**
-- [ ] CMB temperature and anisotropy spectrum
-- [ ] Large-scale structure from STE self-attraction clustering
-- [ ] Galaxy rotation curves from STE density distribution (dark matter replacement)
-- [ ] Hubble expansion rate from nested void cavity dynamics
-- [ ] Antimatter conversion cycle — bare void rewrapping dynamics after annihilation
-- [ ] Chirality bias strength — rewrapping timescale as function of local matter density
-- [ ] Chirality detection — observable signatures distinguishing matter from antimatter
-
-### 16.8 Initial Conditions
-
-The simulation accepts **any valid STE state** and evolves it in either temporal direction:
-
-- **Forward from present**: Match observed universe. Predict future evolution.
-- **Backward from present**: Recover cosmological history — galaxy formation, nucleosynthesis, CMB, Big Bang.
-- **From Big Bang**: High-energy STE plane in nested void cavity. Must self-organize into particles, atoms, stars, galaxies without additional input.
-
-The strongest validation: **initialize at any known historical state and verify that forward evolution matches observations**.
-
----
-
-## 17. Open Questions & Future Work
-
-### 17.1 Photon vs. Neutrino — Transverse vs. Longitudinal
+### 16.1 Photon vs. Neutrino — Transverse vs. Longitudinal
 
 The transverse/longitudinal hypothesis (Section 7.3) needs mathematical development. Must predict neutrino interaction cross-sections from coupling geometry and explain neutrino oscillation in terms of longitudinal-mode instabilities.
 
-### 17.2 The Full Lepton Family
+### 16.2 The Full Lepton Family
 
 Muon and tau are hypothesized as larger/more energetic vortex cloud configurations — same structure as electron with more stored resistance energy. Their instability means larger clouds are not as tightly self-bound. **Needs**: quantitative derivation of muon/tau masses from vortex cloud energetics.
 
-### 17.3 Meson Structure
+### 16.3 Meson Structure
 
 Mesons (quark + antiquark) are hypothesized as micro-void shells whose dense STE concentrations have acquired opposite chirality — inherently unstable configurations. **Needs**: meson mass spectrum as a function of void-concentration chirality mismatch geometry.
 
-### 17.4 The Down Quark's Detailed Structure
+### 16.4 The Down Quark's Detailed Structure
 
 Why does the down quark have its specific mass, charge, and spin? **Updated model**: The down quark is a **quasi-stable saturated knot** — a region of STE so compressed it behaves as a choke particle. Unlike the up quark (which is a void), the down quark is maximum-density STE. Both quarks attract and radiate; the charge (−1/3 for matter chirality) is determined by chirality-directed mismatch: sign from winding direction, magnitude from the local inward-vs-outward mismatch, which is 1/3 at this geometry (1/3 baryon volume, ~0.29 fm sphere of influence).
 
@@ -1693,7 +1520,7 @@ Why does the down quark have its specific mass, charge, and spin? **Updated mode
 
 **Needs**: quantitative derivation of the mismatch amplitude as a function of local structure (void boundary geometry, concentration diffuseness, and radiation offset), confirming that 2/3 and 1/3 emerge at 1/3 baryon volume. Must also confirm that chirality reversal flips sign while preserving mismatch magnitude — i.e., anti-up quark −2/3 and anti-down quark +1/3 arise from reversed winding direction with unchanged local mismatch scale. The fine structure constant is now interpreted as the substrate dilation ratio at the first orbital shell (Section 12.6) — confirming the mismatch derivation would simultaneously confirm that $\alpha = c_{\text{eff}}(r_1)/c$ emerges from the same compression gradient.
 
-### 17.5 Electromagnetism from STE (Critical Path)
+### 16.5 Electromagnetism from STE (Critical Path)
 
 The ontology states that EM is "tension oscillation patterns in STE substrate." This must be developed into a **full derivation of Maxwell's equations from STE dynamics**.
 
@@ -1701,31 +1528,25 @@ The ontology states that EM is "tension oscillation patterns in STE substrate." 
 
 **Status**: Without deriving Maxwell's equations, the ontology cannot claim completeness. This is the single most important theoretical deliverable.
 
-### 17.6 The Custom SPH Kernel (Critical Engineering Path)
+### 16.6 The Custom SPH Kernel (Critical Engineering Path)
 
 No existing SPH kernel models anti-diffusive, self-attracting, cavitating substrates. Standard SPH has a tensile instability problem (particles clumping unrealistically) — STE *wants* clumping but must transition to void formation at threshold.
 
-**Potential approach**: Start from cubic spline kernel, invert pressure term sign, add convergence-resistance energy term, calibrate so that:
-- Two-particle interaction reproduces Planck-length attraction
-- Many-particle bulk reproduces Newtonian gravity
-- High-density convergence produces stable resistance patterns
-- Extreme convergence triggers particle expulsion (cavitation)
+**Public status**: Kernel design requirements are recorded here at a high level; implementation sequence, parameterization strategy, and solver-specific procedures are withheld from this public draft.
 
-**Starting points**: Monaghan 2000, Gray et al. 2001 (tensile instability corrections).
-
-### 17.7 Gravity at Quantum Scale
+### 16.7 Gravity at Quantum Scale
 
 If micro-void cavitation (Section 10) reproduces nuclear binding energies using only STE self-attraction parameters calibrated from macroscopic gravity, this would be the strongest possible validation.
 
-### 17.8 Throughput-Limit Quantification
+### 16.8 Throughput-Limit Quantification
 
 The collapse-throughput failure mechanism (Section 4) needs quantitative bounds: at what energy density does throughput fail? What determines the choke radius? How does the overshoot-recovery cycle frequency relate to the observed quantization of particle masses?
 
-### 17.9 Collapse-Rate Modulation and Time
+### 16.9 Collapse-Rate Modulation and Time
 
 Time dilation as collapse-rate slowdown (Section 2.2) and quantum jumps as collapse-rate discontinuities need mathematical formalization. Must reproduce GPS correction factors from STE density variations.
 
-### 17.10 Testable Predictions
+### 16.10 Testable Predictions
 
 1. **Black holes have no singularity**: Center is empty, not infinitely dense. Gravitational wave signatures should match hollow void + shell dynamics. *LIGO/VIRGO sensitivity.*
 
