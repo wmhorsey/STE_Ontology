@@ -1,7 +1,7 @@
 # The STE Ontology: Collapse-First Physics
 
-**Version 1.3 — Antimatter Conversion & Chirality Bias Update**
-**Last Updated: February 17, 2026**
+**Version 1.4 — Quark Topology, Hawking Lifecycle & Working Hypotheses Update**
+**Last Updated: February 18, 2026**
 
 > *"The universe is made of one thing. It clings to itself. Everything else is consequences."*
 >
@@ -19,14 +19,18 @@
 ### Part II — From Collapse to Structure
 4. [The Mechanistic Chain](#4-the-mechanistic-chain-collapse--choke--resonance--structure)
 5. [Resistance and the Origin of Mass](#5-resistance-and-the-origin-of-mass)
+    - [5.6 Freeze: The Maximum Tension Limit and the Arrow of Time](#56-freeze-the-maximum-tension-limit-and-the-arrow-of-time)
 6. [Spin: Geometry of Asymmetric Collapse](#6-spin-geometry-of-asymmetric-collapse)
 
 ### Part III — Structure Formation
 7. [The Photon: Collapse-Failure in Motion](#7-the-photon-collapse-failure-in-motion)
 8. [Cavitation Events](#8-cavitation-events)
+    - [8.7 Cavitation Without Antimatter — The General Principle](#87-cavitation-without-antimatter--the-general-principle)
 9. [The Void-Core Black Hole](#9-the-void-core-black-hole)
+    - [9.3.1 Shell-to-Shell Gravity](#931-shell-to-shell-gravity)
     - [9.8 Accretion as Progressive Stripping](#98-accretion-as-progressive-stripping)
 10. [The Baryon: Micro-Void and Its Concentration](#10-the-baryon-micro-void-and-its-concentration)
+    - [10.7 Quark Chain Topology and the Insulator Principle](#107-quark-chain-topology-and-the-insulator-principle)
 11. [The Electron, Positron, and Chirality](#11-the-electron-positron-and-chirality)
     - [11.4 The Missing Antimatter Problem — Solved by Void Permanence](#114-the-missing-antimatter-problem--solved-by-void-permanence)
     - [11.5 The Chirality Bias and Its Origin](#115-the-chirality-bias-and-its-origin)
@@ -39,6 +43,7 @@
 ### Part V — Application
 15. [Reframing Map](#15-reframing-map)
 16. [Open Questions & Future Work](#16-open-questions--future-work)
+    - [16.11 Working Hypotheses — Pending Scale Validation](#1611-working-hypotheses--pending-scale-validation)
 
 ### Appendices
 - [Appendix A: Glossary](#appendix-a-glossary)
@@ -415,6 +420,40 @@ Not all choke configurations are equally stable:
 
 Instability means the choke configuration radiates away its stored energy faster than internal collapse dynamics can replenish it. The pattern dissolves, releasing its energy as STE vibrations (radiation) and lower-energy choke configurations (decay products).
 
+### 5.6 Freeze: The Maximum Tension Limit and the Arrow of Time
+
+There is an absolute upper bound on the dynamic state of any region of STE: **freeze** — the condition where local tension is maximized and all degrees of freedom are locked.
+
+When STE tension in a region rises to its maximum:
+
+- **All flow stops.** There is no remaining capacity for STE to rearrange, propagate, or evolve.
+- **All resistance is saturated.** The structure cannot absorb more energy — it is at maximum compression, maximum choke, maximum stored resistance.
+- **Time-like evolution halts locally.** Not because time changes (Axiom 2.2), but because every process that an observer could use to define the passage of time — atomic oscillations, field propagation, collapse dynamics — has ceased. No internal process advances. The region is at maximum pause.
+
+Freeze is the natural consequence of the tension hierarchy:
+
+| Tension Level | System State |
+|---|---|
+| Low | Free flow, high mobility, rapid rearrangement |
+| Medium | Structured flow, resonance, stable chokes (normal matter) |
+| High | Rigid structure, minimal internal dynamics (neutron star shell) |
+| Maximum | **Freeze** — all degrees of freedom locked. Maximum-tension shell of a black hole. |
+
+**Freeze cannot be exceeded, and the system cannot reverse.** There is no mechanism in STE for "anti-tension" — no configuration pushes STE apart. Tension is always ≥ 0, attraction is always inward, and the system can only:
+
+- **Soften** (tension decreases, flow resumes)
+- **Harden** (tension increases, flow slows)
+- **Freeze** (tension at maximum, flow stops)
+
+But it cannot **invert** — there is no state where collapse reverses direction spontaneously. This gives the STE ontology a **natural arrow of time**: the substrate can pause but never rewind. The arrow emerges from the asymmetry of the collapse mechanism itself, not from an imposed thermodynamic law.
+
+**Implications across scales:**
+
+- **STE substrate**: The maximum-tension shell around a void core is the densest, most frozen STE configuration possible. It is the substrate's "hard stop."
+- **Atomic**: Choke points inside baryons approach local freeze — this is why quarks are confined. The flow barriers between them are at or near maximum local tension.
+- **Stellar**: Black hole event horizons are freeze surfaces — the shell is at maximum tension, and nothing internal propagates.
+- **Cosmic**: The universe's overall tension sets its overall "clock rate." If the entire substrate were at maximum tension, the universe would be static — a maximally frozen configuration with no evolution.
+
 ---
 
 ## 6. Spin: Geometry of Asymmetric Collapse
@@ -563,6 +602,18 @@ This compressed shell of STE is what we observe as the **event horizon**:
 - The shell radiates at its boundary — STE vibrations generated by the extreme compression leak outward. This is the STE-ontology analog of **Hawking radiation**: not a quantum tunneling effect, but a classical radiation phenomenon at the shell boundary.
 - The shell represents a **maximum-tension configuration** — the STE is compressed to the highest possible density, contributing significantly to the effective gravitational mass of the structure. The gravitational field observed externally arises from **the tension of the substrate around the void**, not from mass at the center (there is nothing at the center).
 
+**The Full Hawking Lifecycle — From Radiation to Dissolution:**
+
+Because the shell radiates continuously, it is slowly losing stored resistance energy. This sets up a lifecycle with a definitive end-state:
+
+1. **Radiation phase**: The shell leaks energy outward as substrate vibrations. For astrophysical black holes, this rate is negligible compared to accretion input. For isolated micro-voids or small black holes in empty environments, radiation dominates.
+2. **Thinning**: As the shell loses energy, its compression decreases. The shell becomes thinner — less STE is held in the maximum-tension configuration. The gravitational field weakens because the effective mass *is* the shell's stored energy.
+3. **Tension drop**: Below a critical compression, the shell can no longer maintain the attraction gradient steep enough to sustain itself. The tension that held the membrane taut begins to fail.
+4. **Membrane dissolution**: The shell does not "pop" in a catastrophic burst. It dissolves — STE that was held in the shell configuration relaxes outward into the ambient substrate, redistributing its stored energy as a final burst of vibrations. The boundary between void and substrate becomes diffuse rather than sharp.
+5. **Void closure**: Once the membrane is gone, the void has no boundary. The STE surrounding the former void region can now attract across what was once the cavity — the attraction chain reconnects. The void fills in. The emptiness disappears into the surround.
+
+**The information paradox dissolves with the shell.** All structure — every pattern, every bit of information that entered the black hole — was encoded in the shell's tension patterns, turbulence, and vibrational modes. When the shell dissolves, those patterns dissipate into the ambient STE as thermal vibrations. Information is not "lost" in some exotic sense — it is thermalized, exactly as a book burned to ash "loses" its text. The ash contains the same energy, but the pattern is gone. There is no paradox because there is no boundary between inside and outside that information must somehow cross. The shell *was* the information, and the shell evaporated.
+
 ### 8.4 Self-Reinforcing Permanence
 
 Once a cavitation event occurs, it is **self-reinforcing**, and the reason is mechanically precise:
@@ -594,6 +645,33 @@ When two cavitation voids grow close enough that their **shells come into contac
 4. The remaining outer shell **realigns** around the combined void, exactly as two soap bubbles merge into one larger bubble when they touch.
 
 This soap-bubble merger rule is **scale-invariant**: it governs binary black hole mergers at the cosmic scale and quark-level void interactions at the nuclear scale. Same mechanism, vastly different energy scales.
+
+### 8.7 Cavitation Without Antimatter — The General Principle
+
+The cavitation mechanism described in Section 8.1 is often associated with matter–antimatter annihilation events, where the energy release drives STE past its structural limits. But annihilation is **one trigger, not the only one.** Cavitation is a general STE phenomenon that occurs whenever local conditions create a well that can be enclosed by a membrane.
+
+**The general cavitation principle:**
+
+> Void nucleation occurs whenever local STE field spikes — from any source — create an inward well that becomes enclosed by a membrane. Once enclosed, the well deepens under its own dynamics, and void formation becomes inevitable.
+
+Specific pathways to cavitation include:
+
+| Pathway | Mechanism | Scale |
+|---|---|---|
+| **Matter–antimatter annihilation** | Surface-mode cancellation releases concentrated energy → STE tears | Any scale where opposite chiralities meet |
+| **Field-spike interference** | High-energy STE flow spikes intersect → cooperative inward pull creates a well between them | Early universe, extreme energy environments |
+| **DDD swell** (Section 9.7) | Three down-quark concentrations cooperatively pinch off a region → void nucleates | Neutron stars, extreme STE density |
+| **D-D cooperative pinch** (Section 10.5) | Two down quarks within a baryon corner a region of STE → starve it of inflow → well drops into void | Nuclear scale (beta decay) |
+| **Degeneracy failure** | Neutron star compression overwhelms all outward resistance → void cascades | Stellar collapse |
+
+The key insight is that antimatter is **one participant** in a broader class of cavitation events, not the fundamental trigger. Any configuration that reduces outward field support enough to allow a well to form and enclose can produce a void. The void itself does not care what created it — once the STE tears, the self-reinforcing permanence of Section 8.4 takes over.
+
+This generalization is validated across scales:
+
+- **STE substrate**: Field spikes create wells from pure flow dynamics, no particles required.
+- **Nuclear**: D-D cooperative pinch produces beta decay (Section 10.5). The DDD transient state ($\Delta^-$ baryon, lifetime $\sim 10^{-24}$ s) is the doorway configuration — it either nucleates a void and restructures, or flies apart.
+- **Stellar**: Neutron star baryogenesis loop (Section 9.7) runs continuously on this principle.
+- **Cosmic**: Early-universe matter formation did not require pre-existing matter–antimatter pairs. Field-density spikes in the hot early STE were sufficient.
 
 ---
 
@@ -629,6 +707,8 @@ When matter falls into the shell region:
 
 This aligns with observations of dormant black holes in astrophysical systems — massive objects with strong gravitational fields but minimal electromagnetic activity.
 
+**End-state: dissolution.** Even in the dormant state, the shell is radiating (Section 8.3). If accretion ceases permanently — if the black hole is isolated in a void between galaxy clusters, or if the universe expands enough to starve it of inflow — the shell will eventually radiate away its stored energy and dissolve. The void closes. The black hole does not collapse to zero size; it **evaporates into the substrate**, and the emptiness it guarded fills in with reconnecting STE. This is the only true death of a void-core structure: not destruction, but dissolution through radiation of the membrane that defined it.
+
 ### 9.3 Shell as Gravitational Source
 
 The effective mass of a void-core black hole is entirely stored in the shell:
@@ -637,6 +717,18 @@ The effective mass of a void-core black hole is entirely stored in the shell:
 - Turbulent regions of the shell (actively accreting black holes) can exhibit **greater effective mass** than the same shell in a calm configuration — because turbulence redistributes additional stored resistance energy across shell layers, and resistance energy *is* mass.
 - Two black holes of the same shell radius but different accretion activity levels can have different effective masses — the active one is heavier because its shell is more turbulent.
 - The shell's inner boundary is tension-saturated; accretion does not increase peak local tension beyond that cap. Growth appears as expanded shell geometry plus redistributed layer energy around the realigned boundary.
+
+#### 9.3.1 Shell-to-Shell Gravity
+
+Gravity is not point-mass-to-point-mass attraction. It is **shell-to-shell coupling through the STE substrate**. Every void-core structure — from an up quark to a supermassive black hole — creates a tension gradient in the surrounding STE. Gravity is what happens when these gradients overlap.
+
+The mechanism:
+
+1. Each shell creates an STE density gradient that extends outward and **tapers monotonically** — attraction can only decrease with distance from the source. There are no jumps, no long-range spikes, no "gravity tunneling." This is a natural consequence of a continuous, attraction-only medium.
+2. When two shells exist in the same STE region, the substrate between them is being pulled toward both. The STE between the shells is **doing what STE always does** — collapsing inward. Each shell is a "handle" that the tension grips.
+3. The gravitational coupling between two objects scales with their **total shell contact area** with the surrounding STE field, not with a mathematical point-mass abstraction. More shell surface = more aggregate pull. This is why mass scales with baryon count: more baryons = more void-core shells = more surface area coupling to the field.
+
+**Gravity operates below quantization.** STE self-attraction is sub-Planck (Axiom 2.3). This is why gravity cannot be quantized in the standard sense — it is the substrate-level pull that quantized structures *emerge from*. You cannot quantize the thing that quantization is built on top of. The persistent failure of quantum gravity programs is not a failure of ingenuity — it is a category error. Gravity is not a force to be quantized; it is the continuous, sub-quantized medium in which all quantized structures exist.
 
 ### 9.4 Void-Core Growth Mechanics
 
@@ -899,11 +991,17 @@ The neutron (udd) contains:
 The weak force is not a force. It is the **opening and closing of micro-cavitation voids**.
 
 **Neutron → Proton (β⁻ decay):**
-1. Within the neutron's single-void system, the energy sustaining the two dense STE concentrations becomes sufficient to trigger a **second cavitation event** — a new micro-void opens.
-2. The neutron (one void, two concentrations) becomes a proton (two voids, one concentration).
-3. The energy released by the restructuring is emitted as:
-   - An **electron** — a cloud of micro-vortex structures shed from the system (see Section 11).
-   - An **antineutrino** — a tension pulse propagating through the STE substrate.
+1. Within the neutron's single-void system, the two down-quark concentrations are close enough inside the baryon shell to **cooperatively pinch** the STE between them. Each down quark is a dense, attractive knot — and when two of them are adjacent with only one void anchor, they can corner a section of STE between them.
+2. The pinched region becomes **segregated from inflow** — the cooperative attraction of the two downs starves the trapped STE of fresh substrate.
+3. With no inflow to sustain it, the trapped STE drains into the surrounding knots. The local well **deepens**.
+4. The well drops far enough that a **new micro-void nucleates** — a second cavitation event opens inside the baryon.
+5. The STE immediately wraps itself around the new void. One of the two down-quark concentrations has donated its energy to creating the new void-shell — it is consumed in the process.
+6. The neutron (one void, two concentrations) has become a proton (two voids, one concentration).
+7. The excess energy — the part that didn't get locked into the new void-shell — is emitted as:
+   - An **electron** — a micro-vortex cloud shed from the reorganization (see Section 11).
+   - An **antineutrino** — a tension pulse carrying the leftover momentum that couldn't form structure.
+
+**Why free neutrons decay but bound neutrons don't:** The D-D cooperative pinch requires the two downs to be close enough, for long enough, to starve a region of inflow. In a free neutron, the single void provides only one anchor — the two downs can approach each other and cooperate. In a nucleus, the surrounding protons' void cores **alter the internal geometry**: their attraction fields pull the downs apart, their radiation environments disrupt the cooperative pinch, and the nuclear chain structure (Section 10.7) locks the downs into positions where they cannot corner a region together. This is why free neutrons decay in $\sim 880$ seconds, while neutrons bound in stable nuclei persist indefinitely — the nuclear environment geometrically prevents D-D cooperation.
 
 **Proton → Neutron (β⁺ decay / electron capture):**
 1. Sufficient external energy forces one of the proton's two micro-voids to **close** — a cavitation reversal at nuclear scale.
@@ -916,6 +1014,50 @@ The weak force is not a force. It is the **opening and closing of micro-cavitati
 
 - The **W boson** is not an independent particle. It is the **transient, explosive energy configuration** that exists during the moment a micro-void is opening or closing — the intermediate state between one-void and two-void configurations. It is extremely short-lived because the system rapidly settles into its new stable state.
 - The **Z boson** is the energy configuration of a void-opening/closing event that *fails* — the system is perturbed toward a transition but snaps back, radiating the perturbation energy. A "bounce" off the cavitation threshold.
+
+### 10.7 Quark Chain Topology and the Insulator Principle
+
+The quarks within a baryon are not three discrete, isolated entities. They form a **continuous alternating chain** — void-choke-void (UDU) or choke-void-choke (DUD) — where each quark merges into the next through flow geometry. The "baryon boundary" is where we choose to draw the line on a continuous structure.
+
+#### 10.7.1 The Continuous Chain
+
+In a proton (UUD), the internal structure is better described as **UDU**: two void cores (U) separated by one choke insulator (D). The down quark sits between the two voids not by accident but by **structural necessity** — it is the insulating layer that prevents premature void merger.
+
+Without the down quark between them, the two up-quark voids in a proton would be adjacent. The soap-bubble merger rule (Section 8.6) would apply immediately — shared boundary dissolves, voids merge. The proton would collapse into a single, larger void in femtoseconds. **The down quark is the structural insulator that keeps the two voids separate.**
+
+This insulator role is confirmed by examining what happens when the void-choke spacing is violated:
+
+| Configuration | Chain | Lifetime | Why |
+|---|---|---|---|
+| $\Delta^{++}$ | UUU | $\sim 5.6 \times 10^{-24}$ s | Three voids, zero insulators. No choke spacers → voids interact directly → instant collapse or rearrangement. |
+| Proton | UDU | $> 10^{34}$ years | Two voids properly insulated by one choke. Stable. |
+| Neutron | DUD | $\sim 880$ s (free) | One void, two chokes. Metastable — chokes can cooperate to nucleate (Section 10.5). Stable when bound in nuclei. |
+| $\Delta^{-}$ | DDD | $\sim 5.6 \times 10^{-24}$ s | Three chokes, zero voids. No topological anchor → pure radiance → instant dissolution. |
+
+The $\Delta$ baryons ($\Delta^{++}$ = UUU, $\Delta^{-}$ = DDD) are the experimental proof of the insulator principle. Both die in $\sim 10^{-24}$ seconds — the only configurations without proper void-choke alternation. The stable baryons (proton, neutron) are the *only* quark arrangements where voids and chokes alternate correctly.
+
+#### 10.7.2 Nuclear Structure as Chain Extension
+
+When baryons bind into nuclei, the chain extends across baryon boundaries. Adjacent baryons share links:
+
+- **Deuterium** (proton + neutron): UDU|DUD. The chain alternates continuously across the nuclear bond. The "strong force" is not a force — it is the **structural continuity** of the quark chain. You cannot pull two baryons apart without breaking the chain, and breaking the chain costs the energy we call "binding energy."
+
+- **Helium-4** (2 protons + 2 neutrons): (UDU|DUD)/(DUD|UDU). The first closed ring — every void has a partner pulling from the other side, every choke has a partner. The quadrupole asymmetry of deuterium (where the ups pull slightly around the downs, creating a measurable prolate distortion) **cancels** in He-4. This is why He-4 is the most tightly bound light nucleus — it is the first configuration where the alternating chain fully closes with no frustrated links.
+
+- **Heavier nuclei**: Additional baryons latch onto the surface of the growing chain-ball where linkage sites are available. Interior links are fully satisfied; growth happens at the surface. This is why binding energy per nucleon plateaus around iron — the surface-to-volume ratio hits its optimal point for chain satisfaction.
+
+#### 10.7.3 The Insulator Principle
+
+The down quark's structural role can be stated as a principle:
+
+> **Down quarks are structural insulators.** They occupy the gaps between void cores, preventing void-void proximity interactions (merger or destabilization) while simultaneously mediating the flow between voids. Without them, void-core structures cannot persist. With too many of them (relative to voids), the concentrated STE energy has no topological anchor and radiates away.
+
+This explains:
+- **Why the proton is stable**: Two voids, one insulator — optimal spacing.
+- **Why the neutron is metastable**: One void, two insulators — the insulators can cooperate to nucleate a new void (beta decay).
+- **Why UUU and DDD die instantly**: Zero insulators or zero anchors — geometry is fatally unbalanced.
+- **Why heavier nuclei need extra neutrons**: As the chain-ball grows, surface voids are farther apart. Extra DUD segments are needed to fill the gaps and maintain chain continuity across the larger structure. The neutrons are structural filler — spacers between protons that would otherwise be geometrically frustrated.
+- **Why the drip line exists**: Eventually, the surface of the chain-ball is so far from the core that new neutrons cannot find adequate linkage. They are BBs on the edge of the magnet pile — vibrating, barely held, and eventually falling off.
 
 ---
 
@@ -1308,6 +1450,20 @@ The ongoing expansion of the universe is not driven by dark energy, a cosmologic
 - The "expansion" is the STE spreading to fill the available space within the void boundaries, while simultaneously being pulled inward by its own self-attraction (forming galaxies, stars, etc.).
 - **Accelerating expansion** may reflect the ongoing merger dynamics of the parent void shells — the outer void boundary is still evolving in the parent universe, changing the geometry of the cavity our STE occupies.
 
+**The Cosmic Shoreline — Elastic Boundary Mechanics:**
+
+The boundary where our STE meets the surrounding void is not a rigid wall. It is an **elastic membrane** — the same shell physics that governs black holes (Section 8.3) scaled up to cosmic dimensions. The STE at the edge does what STE everywhere does: it self-attracts, it compresses, and when pushed against void, it forms a tension-saturated surface.
+
+But this surface is not static. It **sloshes**:
+
+- Where mass concentrations exist near the boundary (galaxy superclusters, cosmic filaments), the STE is pulled slightly inward, creating local dimples in the boundary surface. The void bulges inward there.
+- Where the boundary is far from any mass concentration (cosmic voids between filaments), the STE has less inward pull and presses farther outward against the void. The boundary stretches.
+- The boundary **breathes** — it stretches and contracts as the internal mass distribution evolves. It is a living surface, not a frozen edge.
+
+The analogy is a **shoreline**: water (STE) meets land (void), and the boundary between them is not a fixed line. It sloshes, it pulses with tides, it fills inlets and retreats from headlands. Cosmic expansion is not the universe inflating like a balloon — it is the ocean of STE finding its level within a cavity, with the waterline advancing and retreating locally while the average level slowly rises as the cavity geometry evolves.
+
+**What the boundary cannot do:** release STE into the void. The void is absence — there is nothing there to receive substrate. The STE can press against the boundary, compress itself at the edge, even bulge slightly into the cavity, but it cannot cross. The boundary is the ultimate shoreline: an edge that the ocean can push against but never overflow.
+
 ### 13.4 The Cosmic Microwave Background
 
 The CMB is the thermal radiation signature of the initial energy state — the resonant vibrations of the compressed STE shell wall that became our universe. Its remarkable uniformity reflects the uniformity of the shell wall that sourced it. Its tiny anisotropies reflect:
@@ -1566,6 +1722,94 @@ Time dilation as collapse-rate slowdown (Section 2.2) and quantum jumps as colla
 
 9. **Runaway black hole wake as cosmic baryon analog**: The van Dokkum object — a supermassive black hole ejected from its host galaxy, leaving a 200,000-light-year trail of newborn stars in its wake — is the cosmic-scale analog of baryon wake structure. In STE terms: the black hole's passage creates a compression trail in the STE substrate, and that trail condenses into structure (stars/atoms) on a timescale determined by $t = d/c$ at cosmic distances. The trail of star formation IS the accretion wake, and the condensation time to form stars from the disturbed STE at cosmic scale (~millions of years) corresponds directly to the condensation time to form orbital structure from a baryon's wake at nuclear scale (~$10^{-23}$ seconds). Same mechanism, same speed, different ruler. *HST/JWST observations of additional runaway BH star trails.*
 
+### 16.11 Working Hypotheses — Pending Scale Validation
+
+The following ideas are structurally consistent with STE ontology and have appeared in working discussions, but **have not yet been validated across all four required scales** (STE substrate, atomic, life/planetary, cosmic). They are recorded here as hypotheses for future development. Each entry notes which scales have been checked and which remain open.
+
+#### B1. Quantum Foam Reinterpretation and the Vacuum Catastrophe
+
+**Hypothesis**: What QFT calls "vacuum energy" is the ambient self-attraction hum of STE — the substrate vibrating at its ground state. The 120-order-of-magnitude discrepancy between QFT's vacuum energy prediction and observation (the vacuum catastrophe) arises because QFT sums over field modes that do not exist in a continuous, sub-quantized medium. STE has no zero-point oscillators; it has a tension floor.
+
+| Scale | Status |
+|---|---|
+| STE substrate | ✅ Consistent — sub-quantized medium has no mode sum |
+| Atomic | ⚠️ Must show Casimir effect emerges from STE boundary conditions, not zero-point energy |
+| Life/planetary | ❌ Not yet examined |
+| Cosmic | ⚠️ Must confirm Λ-equivalent arises naturally from STE ground-state tension |
+
+#### B2. Planetary Void-Core Nucleosynthesis
+
+**Hypothesis**: Planets with sufficient internal pressure may host micro-void cascades in their cores — a low-grade version of neutron-star DDD nucleosynthesis. Earth's unexplained internal heat budget and anomalous helium-3 outgassing could be signatures of ongoing sub-nuclear void activity at depth.
+
+| Scale | Status |
+|---|---|
+| STE substrate | ✅ Mechanism is standard cavitation |
+| Atomic | ✅ DDD swell mechanism established (Section 9.7) |
+| Life/planetary | ⚠️ Must quantify pressure thresholds — does Earth's core reach DDD activation? |
+| Cosmic | ❌ Not yet examined at stellar/galactic population level |
+
+#### B3. Light as Field Tension — Photon, Entanglement, and the Measurement Trichotomy
+
+**Hypothesis**: Light is not a traveling particle. It is a **tension disturbance** propagating through STE at $c$. What we call a "photon" is a **convergence event** — the moment a propagating wave front deposits its energy into a localized structure (an atom, a detector). The photon is the measurement, not the traveler.
+
+**Entanglement** under this view is **correlated convergence**: two distant detectors registering events that are correlated because they were sourced by the same wave-field disturbance. The correlation was written into the wave at emission and is read out at detection. No signal travels between detectors; no "spooky action" is needed.
+
+| Scale | Status |
+|---|---|
+| STE substrate | ✅ Tension waves propagate naturally in self-attracting media |
+| Atomic | ⚠️ Must reproduce photoelectric effect, Compton scattering from convergence model |
+| Life/planetary | ❌ Not yet examined (optics, thermal radiation) |
+| Cosmic | ⚠️ Must show redshift arises from wave propagation in expanding STE, not "photon stretching" |
+
+#### B4. Mass Requires Flow
+
+**Hypothesis**: Mass is not an intrinsic property — it is **resistance to changes in STE flow**. A structure has mass only because it is embedded in a flowing substrate and resists being moved relative to that flow. In a hypothetical region of perfectly static STE (zero flow, zero gradient), structures would have zero inertial mass.
+
+This implies mass is contextual: it depends on the substrate environment, not just on the structure itself.
+
+| Scale | Status |
+|---|---|
+| STE substrate | ✅ Consistent with resistance = mass (Section 5) |
+| Atomic | ⚠️ Must show electron mass variations in extreme field environments |
+| Life/planetary | ❌ Not yet examined |
+| Cosmic | ⚠️ Implications for mass in cosmic voids (low-density STE regions) unexplored |
+
+#### B5. Gravitational Surface-Area Coupling Scales with Up-Quark Count
+
+**Hypothesis**: Because gravity is shell-to-shell coupling (Section 9.3.1) and each up quark contributes one void-core shell, the total gravitational coupling of ordinary matter should scale strictly with **total up-quark count**, not with total energy. This predicts subtle deviations from $E = mc^2$ gravitational equivalence for systems with different baryon-to-energy ratios.
+
+| Scale | Status |
+|---|---|
+| STE substrate | ✅ Shell-to-shell mechanism established |
+| Atomic | ⚠️ Must compute gravitational contribution per up quark vs. per down quark |
+| Life/planetary | ❌ Not yet examined |
+| Cosmic | ⚠️ Implications for dark matter observations — could non-baryonic gravity deficit be explained by missing shell count? |
+
+#### B6. Magnetic Field and Galactic Trajectory Correlation
+
+**Hypothesis**: If magnetic fields are STE rotation patterns (tension vortices in the substrate), then large-scale magnetic field orientation should correlate with the trajectory of STE flow set by cosmic structure (filaments, voids, expansion). Galactic magnetic fields should preferentially align with the local STE flow direction.
+
+| Scale | Status |
+|---|---|
+| STE substrate | ⚠️ Magnetic fields as STE rotation not yet formally derived |
+| Atomic | ❌ Must connect to electron orbital magnetism |
+| Life/planetary | ⚠️ Earth's magnetic field — does dynamo theory map to STE flow rotation? |
+| Cosmic | ⚠️ Observational data on filament-aligned magnetic fields exists but correlation not yet tested |
+
+#### B7. GR + STE Baseline Interaction
+
+**Hypothesis**: General relativity's curved spacetime description can be reinterpreted as the STE density gradient. Two interaction modes are possible:
+
+- **Case 1 (Uniform offset)**: STE self-attraction contributes a uniform baseline tension everywhere, behaving like a cosmological constant Λ. GR metrics remain valid but with a natural Λ that requires no fine-tuning.
+- **Case 2 (Dynamical field)**: STE density varies enough to produce gradients that modify the local metric. GR becomes an effective theory valid in the smooth-gradient regime, with STE corrections appearing at extreme compression (black hole shells) and extreme rarefaction (cosmic boundary).
+
+| Scale | Status |
+|---|---|
+| STE substrate | ✅ Self-attraction is the baseline |
+| Atomic | ❌ GR corrections at nuclear scale not yet computed |
+| Life/planetary | ⚠️ Must reproduce GPS corrections from STE density variations (already noted in §16.9) |
+| Cosmic | ⚠️ Must distinguish Case 1 vs. Case 2 observationally |
+
 ---
 
 ## Appendix A: Glossary
@@ -1618,4 +1862,4 @@ The universe is made of a single, continuous, self-attracting substance called S
 
 ---
 
-*End of document. Version 1.3 — Antimatter Conversion & Chirality Bias.*
+*End of document. Version 1.4 — Quark Topology, Hawking Lifecycle & Working Hypotheses.*
